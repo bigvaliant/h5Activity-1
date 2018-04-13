@@ -1,0 +1,94 @@
+.luckyDraw_top,.luckyDraw_sec2,.luckyDraw_sec3 {
+    /*background-color: #ffd920;*/
+    max-width: 720px;
+}
+img {
+    width: 100%;
+}
+.luckyDraw_sec2_part1,.luckyDraw_sec31 {
+
+    position: relative;
+    padding: 6% 7%;
+}
+.luckyDraw_sec3_part1,.luckyDraw_sec3_part2 {
+    background-color: #ff5848;
+    color: #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 20px;
+}
+.luckyDraw_sec3 {
+    padding: 28px 0 64px;
+    /*background: #ffd920 url("../images/footer.png") repeat-x center bottom;*/
+	background: url("../images/footer.png") repeat-x center bottom;
+    background-size: contain;
+}
+.luckyDraw_sec3_part2 {
+    margin-top: 32px;
+}
+.luckyDraw_sec3_title {
+     font-size: 1.4em;
+    margin-bottom: 10px;
+ }
+.luckyDraw_sec3_con {
+    font-size: 0.7em;
+    line-height: 32px;
+}
+#demo {
+    height: 128px;
+    overflow: hidden;
+    position: relative;
+}
+#demo>ul {
+    position: absolute;
+    top: 0;
+}
+#demo>ul>li {
+    height: 32px;
+}
+.luckyDraw_sec3_part3 {
+    margin-top: 20px;
+}
+body {
+    font-size: 16px;
+}
+.luckyDraw_sec21{
+    margin: 0 4%;
+    background: url("../images/cj1.png") no-repeat center top;
+    background-size: contain;
+}
+#lottery table {
+    width: 100%;
+}
+#lottery table td{
+    background-color: #fff4a3;
+    border-radius: 10px;
+    display: inline;
+    float: left;
+    width: 30%;
+}
+
+#lottery table td>a{
+    display:block;
+    text-decoration:none;
+}
+#lottery table td.active{
+    background-color:#ffee19;
+}
+.mar1 {
+    margin: 1% 1% 1% 3%;
+}
+.mar2 {
+    margin: 1%;
+}
+.mar3 {
+    margin: 1% 3% 1% 1%;
+}
+.td_5 {
+    background-color: #f94a24!important;
+}
+.luckyDraw_sec31 {
+    padding: 0!important;
+    margin: 0 6%;
+}

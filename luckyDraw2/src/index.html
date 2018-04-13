@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>欢乐抽大奖</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--rem-->
+    <script src="js/px2rem.js"></script>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.12.4/jquery-1.12.4.min.js"></script>
+    <script src="js/lottery.js"></script>
+</head>
+<body>
+    <!-- 抽奖 -->
+    <div class="raffle_main">
+        <div class="title">
+            <img src="img/title_top.png" alt="">
+        </div>
+        <div class="container">
+            <img src="img/raffle_bg.png" alt="">
+            <ul class="content">
+                <li class="item item_1">
+                    <div class="pic envelope">
+                        <img src="img/icon_1.png" alt="">
+                    </div>
+                    <p>300元红包</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_2">
+                    <div class="pic">
+                        <img src="img/icon_2.png" alt="">
+                    </div>
+                    <p>1000元代金券</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_3">
+                    <div class="pic envelope">
+                        <img src="img/icon_3.png" alt="">
+                    </div>
+                    <p>666元红包</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_4">
+                    <div class="pic">
+                        <img src="img/icon_4.png" alt="">
+                    </div>
+                    <p>2000元代金券</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_5">
+                    <div class="pic">
+                        <img src="img/icon_5.png" alt="">
+                    </div>
+                    <p>5000元代金券</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_6">
+                    <div class="pic envelope">
+                        <img src="img/icon_6.png" alt="">
+                    </div>
+                    <p>500元红包</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_7">
+                    <div class="pic envelope">
+                        <img src="img/icon_7.png" alt="">
+                    </div>
+                    <p>888元红包</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item item_8">
+                    <div class="pic">
+                        <img src="img/icon_8.png" alt="">
+                    </div>
+                    <p>3000元代金券</p>
+                    <span class="modal"></span>
+                </li>
+                <li class="item start" id="start">
+                    <a href="javascript:;"></a>
+                    <span class="modal"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="raffle_tips">
+            <div class="line_text">
+                今天有<span class="count">3</span>次抽奖机会
+            </div>
+        </div>
+        <div class="rule_text">
+            <h3>抽奖规则</h3>
+            <p>1、本活动仅限老用户参加，每人有8次免费抽奖机会；</p>
+            <p>2、每投资超500元奖励1次抽奖机会，</p>
+            <p>3、本活动最终解释权归天下商机所有。</p>
+        </div>
+    </div>
+
+    <!-- 抽奖成功 -->
+    <div class="reffle_ok">
+        <div class="main">
+            <img src="img/ok_bg.png" alt="">
+            <div class="close">X</div>
+            <div class="reffle_pic">
+                <img id="feffle_ok_img" src="img/icon_2.png" alt="">
+            </div>
+            <div class="text">
+                <p>恭喜你</p>
+                <p>获得<span class="name" id="feffle_ok_text">1000元创业代金券</span></p>
+                <div class="go_award">
+                    <a href="javascript:;">马上去领奖</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

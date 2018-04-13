@@ -1,0 +1,49 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ul { list-style: none;}
+
+html, body { height: 100%; }
+body { color: #000;}
+img { display: block; width: 100%; }
+
+/* 头部 */
+.raffle_main { position: relative; height: 100%; background: url("../img/bg.png") no-repeat center top / cover; overflow-y: auto;}
+.raffle_main .title { position: absolute; top:0; left: 0; right: 0;  width: 6.75rem; margin: 0 auto; }
+
+/* 抽奖区 */
+.container { position: absolute; left: 0; top: 3.70rem; right: 0; width: 6.58rem; height: 6.12rem; margin: 0 auto; z-index: 10;}
+.content { position: absolute; left: 0; top: 0.47rem; right: 0; margin: 0 auto; width: 5.78rem; height: 4.90rem; }
+.content .item { float: left; position: absolute; width: 1.92rem; height: 1.63rem; margin-right: 0.01rem; padding: 0.17rem 0.17rem 0 0.17rem; border: 0.02rem solid #ff4d01; border-radius: 0.20rem; overflow: hidden; }
+.content .item .pic { position: relative; width: 1.53rem; height: 0.86rem; }
+.envelope img { width: 0.96rem; }
+.content .item img { position: absolute; left:0; right: 0; bottom: 0; margin: 0 auto; }
+.content .item p { height: 0.35rem; line-height: 0.35rem; text-align: center; font-size: 0.20rem; color: #000; }
+.content .item .modal { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+.content .start { padding: 0; }
+.content .start a { display: block; height: 100%; }
+
+
+/* 提示 */
+.raffle_tips { position: absolute; left: 0; top: 9.76rem; right: 0; width: 5.50rem; height: 0.73rem; margin: 0 auto; z-index: 5; border: 3px solid #4a0e64;}
+.raffle_tips .line_text { position: absolute; left: 0; top: 0.34rem; right: 0; width: 4.44rem; height: 0.68rem; margin: 0 auto; line-height: 0.60rem; text-align: center; border: 3px solid #4a0e64; background: #ffc700; font-size: 0.33rem; color: #440062;  border-radius: 1.10rem;}
+.raffle_tips .count { padding: 0 0.05rem; color: #fd0f01; }
+
+/* 抽奖规则 */
+.rule_text { position: absolute; left: 0; top: 11.19rem; right: 0; width: 5.55rem; margin: 0 auto; color: #fff; padding-bottom: 0.50rem; }
+.rule_text h3 { height: 0.45rem; line-height: 0.45rem; font-size: 0.28rem; }
+.rule_text p { line-height: 0.38rem; font-size: 0.22rem;  }
+
+/* 抽奖成功 */
+.reffle_ok { display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 99;}
+.reffle_ok .main { position: absolute; left: 0; right: 0; top: 1.26rem; width: 5.62rem; height: 8.61rem; margin: 0 auto; }
+.reffle_ok .close { position: absolute; right: 0.25rem; top: 2.60rem; width: 0.50rem; height: 0.50rem; background: #eda201; border-radius: 50%; }
+.reffle_ok .close { font-size: 0.30rem; color: #fff; text-align: center; line-height: 0.50rem;}
+
+.reffle_ok .reffle_pic { position: absolute; left: 0; right: 0; bottom: 3.16rem; margin: 0 auto; width: 3.97rem; height: 2.31rem; }
+.reffle_ok .reffle_pic img { position: absolute; left: 0; right: 0; bottom: 0; margin: 0 auto;  }
+.hb img { width: 2.5rem; }
+.reffle_ok .text { position: absolute; left: 0; bottom: 0; width: 100%; padding-bottom: 0.39rem; text-align: center;}
+.reffle_ok .text p { line-height: 0.56rem; font-size: 0.30rem; }
+.reffle_ok .text .name { margin-left: 0.10rem; }
+.reffle_ok .text .go_award { display: inline-block; width: 4.74rem; height: 0.67rem; line-height: 0.67rem; margin-top: 0.18rem; font-size: 0.36rem; background: #ff352a; border-radius: 0.50rem; text-align: center; color: #fff; overflow: hidden;}
+.reffle_ok .text .go_award  a { display: block; color: #fff; text-decoration: none;}

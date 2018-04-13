@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="iwenli HTML5 PageTemplate">
+    <meta name="description" content="">
+    <meta name="author" content="iwenli,admin@iwenli.org">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="-1" http-equiv="Expires">
+    <meta content="no-cache" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="Pragma">
+    <title>幸运大抽奖</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/luckyDraw.css">
+    <script type="text/javascript" src="public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/jquery-marquee.js"></script>
+    <style>
+        .popup_bg {
+            position: absolute;
+            z-index: 1000;
+            background-color: #000;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .popup {
+            display: none;
+            margin: -80px 0 0 -140px;
+            position: absolute;
+            z-index: 1001;
+            width: 280px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        
+        .popup header {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        
+        .popup_cont {
+            padding: 10px 10px;
+            line-height: 24px;
+        }
+        
+        .popup footer {
+            overflow: hidden;
+            padding: 5px 0 15px 0;
+        }
+        
+        .popup a.button {
+            width: 110px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #00afba;
+            color: #fff;
+            padding: 0;
+            border: 0;
+            float: left;
+            margin: 0 15px;
+        }
+        
+        .popup a.button#cancel {
+            background-color: #ff864f;
+        }
+        
+        .popup a.button#cancel.center {
+            width: 250px;
+            background-color: #00afba;
+        }
+        
+        .popup a.button#cancel.center {
+            width: 250px;
+            background-color: #00afba;
+        }
+        
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1001;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=88);
+        }
+        
+        .white_content {
+            display: none;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            top: 25%;
+            left: 22%;
+            width: 55%;
+            height: 55%;
+            /*border: 10px solid orange;*/
+            background-color: none;
+            z-index: 1002;
+            overflow: auto;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!--header start-->
+        <section id="luckyDraw_top" class="luckyDraw_top show_center">
+            <div id="snow" class="snow" style="position:relative;height:20%;overflow:hidden;">
+                <img src="public/images/header.png">
+            </div>
+        </section>
+        <section class="luckyDraw_sec2 show_center">
+            <div class="luckyDraw_sec21">
+                <div class="luckyDraw_sec2_part1" id="lottery">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr class="lottery-group">
+                            <td class="lottery-unit td_1 active mar1"><img src="public/images/1.png" /></td>
+                            <td class="lottery-unit td_2 mar2"><img src="public/images/2.png" /></td>
+                            <td class="lottery-unit td_3 mar3"><img src="public/images/3.png" /></td>
+                        </tr>
+                        <tr class="lottery-group">
+                            <td class="lottery-unit td_4 mar1"><img src="public/images/4.png" /></td>
+                            <td class="td_5 mar2">
+                                <a href="javascript:void(0);"><img src="public/images/5.png" /></a>
+                            </td>
+                            <td class="lottery-unit td_6 mar3"><img src="public/images/6.png" /></td>
+                        </tr>
+                        <tr class="lottery-group">
+                            <td class="lottery-unit td_7 mar1"><img src="public/images/8.png" /></td>
+                            <td class="lottery-unit td_8 mar2"><img src="public/images/7.png" /></td>
+                            <td class="lottery-unit td_9 mar3"><img src="public/images/9.png" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+        <section class="luckyDraw_sec3 show_center">
+            <div class="luckyDraw_sec31">
+                <div class="luckyDraw_sec3_part1">
+                    <p class="luckyDraw_sec3_title">中奖名单</p>
+                    <div id="demo">
+                        <ul class="luckyDraw_sec3_con float_left">
+                            <li>手机号:158****3987 刚刚抽中 68元红包</li>
+                            <li>手机号:158****9985 刚刚抽中 18元红包</li>
+                            <li>手机号:179****2423 刚刚抽中 188元红包+神秘奖券</li>
+                            <li>手机号:136****8524 刚刚抽中 99元红包</li>
+                            <li>手机号:136****8599 刚刚抽中 18元红包</li>
+                            <li>手机号:136****7735 刚刚抽中 68元红包</li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+                <div class="luckyDraw_sec3_part2">
+                    <p class="luckyDraw_sec3_title">活动规则</p>
+                    <ul class="luckyDraw_sec3_con float_left">
+                        <li>1 每个手机号只有一次抽奖机会</li>
+                        <li>2 奖品在完成信息注册后自动发放</li>
+                        <li></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+        <section class="show_center" style="width:100%;max-widht:720px;">
+            <div id="light" class="white_content"><img src="public/images/gongxi.png" /></div>
+        </section>
+        <div id="fade" class="black_overlay"></div>
+        <script type="text/javascript" src="public/js/lottery.js"></script>
+        <script type="text/javascript" src="public/js/luckyDraw.js"></script>
+        <script src="public/js/jsized.snow.min.js" type="text/javascript"></script>
+        <script>
+            /**
+     * This function takes 2 arguments
+     * First is the path to the directory with snowflake images
+     * Second is the maximum number of snowflakes, please do not
+     * set this number above 60 as it will impact the performance
+     */
+            createSnow('', 60);
+
+        </script>
+    </body>
+</html>
